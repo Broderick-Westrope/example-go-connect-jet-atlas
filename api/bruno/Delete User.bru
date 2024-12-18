@@ -1,0 +1,17 @@
+meta {
+  name: Delete User
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/user.v1.UserService/DeleteUser
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1
+  }
+}

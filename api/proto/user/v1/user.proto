@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package user.v1;
+
+import "google/protobuf/timestamp.proto";
+
+// UserService handles user-related operations
+service UserService {
+  // CreateUser creates a new user account
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+  // GetUser retrieves user details by ID
+  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+  // UpdateUser updates existing user details
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
+  // DeleteUser removes a user account
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
+}
+
+// User represents a user account in the system
+message User {
+  int64 id = 1;
+  string email = 2;
+  string name = 3;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+}
+
+message CreateUserRequest {
+  string email = 1;
+  string name = 2;
+}
+
+message CreateUserResponse {
+  User user = 1;
+}
+
+message GetUserRequest {
+  int64 id = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+message UpdateUserRequest {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message UpdateUserResponse {
+  User user = 1;
+}
+
+message DeleteUserRequest {
+  int64 id = 1;
+}
+
+message DeleteUserResponse {}

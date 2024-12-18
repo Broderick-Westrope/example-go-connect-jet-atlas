@@ -1,0 +1,43 @@
+version: "3"
+
+env:
+  DSN: "postgres://root:pass@localhost:5432/dev?sslmode=disable"
+
+tasks:
+  run:
+    cmds:
+      - go run ./cmd/eventurely/
+
+  codegen:
+    cmds:
+      - buf generate
+      - jet -dsn=$DSN -path=./gen
+
+  push:
+    cmds:
+      - buf push
+
+  migrate:
+    cmds:
+      - atlas schema apply -u $DSN --to file://schema.hcl
+
+  deps.reload:
+    cmds:
+      - task devstack.down
+      - docker compose up --build -d postgres
+      - sleep 2
+      - task migrate
+
+  devstack.up:
+    cmds:
+      - docker compose up --build -d
+      - task migrate
+
+  devstack.down:
+    cmds:
+      - docker compose down -v
+
+  devstack.reload:
+    cmds:
+      - task devstack.down
+      - task devstack.up

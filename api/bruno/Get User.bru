@@ -1,0 +1,17 @@
+meta {
+  name: Get User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/user.v1.UserService/GetUser
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1
+  }
+}

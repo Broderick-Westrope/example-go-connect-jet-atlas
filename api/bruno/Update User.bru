@@ -1,0 +1,19 @@
+meta {
+  name: Update User
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/user.v1.UserService/UpdateUser
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1,
+    "email": "some.email@example.com",
+    "name": "Jodie Rowe"
+  }
+}
