@@ -99,6 +99,18 @@ Buf provides:
 - Built-in linting and breaking change detection
 - Optional schema registry for sharing APIs (not used in this example; see [BSR](https://buf.build/docs/bsr/introduction/))
 
+### Bruno
+
+[Bruno](https://www.usebruno.com/) is an open source API client that's like a lightweight alternative to Postman, Insomnia, HTTPie, and other similar tools. It stores API collections as simple text files in your repository (see [api/bruno/](./api/bruno/)), making it easy to version control and share how to test the API.
+
+Benefits of Bruno:
+
+- API collections are stored as text files alongside your code
+- Git-friendly, making it easy to share requests with team
+    - Changes to the API routes, authentication, etc are more easily seen during code reviews
+- No account required, completely free and open source
+- Simple environment switching for local/staging/prod (also stored within the repo)
+
 ### Task (Taskfile)
 
 [Task](https://taskfile.dev/) is a modern alternative to Make, providing a clean way to define and run project tasks. The [taskfile.yaml](./taskfile.yaml) includes commands for:
