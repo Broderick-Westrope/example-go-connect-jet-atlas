@@ -1,4 +1,4 @@
-module github.com/Broderick-Westrope/eventurely-go
+module github.com/Broderick-Westrope/example-go-connect-jet-atlas
 
 go 1.23.3
 

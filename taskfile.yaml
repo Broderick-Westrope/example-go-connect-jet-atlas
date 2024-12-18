@@ -4,18 +4,10 @@ env:
   DSN: "postgres://root:pass@localhost:5432/dev?sslmode=disable"
 
 tasks:
-  run:
-    cmds:
-      - go run ./cmd/eventurely/
-
   codegen:
     cmds:
       - buf generate
       - jet -dsn=$DSN -path=./gen
-
-  push:
-    cmds:
-      - buf push
 
   migrate:
     cmds:

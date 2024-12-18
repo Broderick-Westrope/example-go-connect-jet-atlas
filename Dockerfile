@@ -7,7 +7,7 @@ RUN go mod download
 
 COPY . ./
 
-RUN go build -v -o server ./cmd/eventurely/
+RUN go build -v -o server ./cmd/example/
 
 # Use the official Debian slim image for a lean production container.
 # https://hub.docker.com/_/debian
