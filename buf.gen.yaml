@@ -3,7 +3,7 @@ managed:
   enabled: true
   override:
     - file_option: go_package_prefix
-      value: github.com/Broderick-Westrope/eventurely-go/gen
+      value: github.com/Broderick-Westrope/example-go-connect-jet-atlas/gen
 plugins:
   - remote: buf.build/protocolbuffers/go
     out: gen

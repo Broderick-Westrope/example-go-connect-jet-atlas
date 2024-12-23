@@ -8,7 +8,7 @@ import (
 	connect "connectrpc.com/connect"
 	context "context"
 	errors "errors"
-	v1 "github.com/Broderick-Westrope/eventurely-go/gen/user/v1"
+	v1 "github.com/Broderick-Westrope/example-go-connect-jet-atlas/gen/user/v1"
 	http "net/http"
 	strings "strings"
 )

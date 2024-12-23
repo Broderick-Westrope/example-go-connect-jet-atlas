@@ -1,8 +1,8 @@
 package transform
 
 import (
-	"github.com/Broderick-Westrope/eventurely-go/gen/dev/public/model"
-	userv1 "github.com/Broderick-Westrope/eventurely-go/gen/user/v1"
+	"github.com/Broderick-Westrope/example-go-connect-jet-atlas/gen/dev/public/model"
+	userv1 "github.com/Broderick-Westrope/example-go-connect-jet-atlas/gen/user/v1"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 

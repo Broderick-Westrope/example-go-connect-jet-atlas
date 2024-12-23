@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/Broderick-Westrope/eventurely-go/gen/dev/public/model"
-	"github.com/Broderick-Westrope/eventurely-go/gen/dev/public/table"
+	"github.com/Broderick-Westrope/example-go-connect-jet-atlas/gen/dev/public/model"
+	"github.com/Broderick-Westrope/example-go-connect-jet-atlas/gen/dev/public/table"
 	"github.com/go-jet/jet/v2/postgres"
 )
 

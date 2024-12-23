@@ -12,8 +12,8 @@ import (
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
 
-	"github.com/Broderick-Westrope/eventurely-go/gen/user/v1/userv1connect"
-	"github.com/Broderick-Westrope/eventurely-go/internal/data"
+	"github.com/Broderick-Westrope/example-go-connect-jet-atlas/gen/user/v1/userv1connect"
+	"github.com/Broderick-Westrope/example-go-connect-jet-atlas/internal/data"
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/chi/v5"
 

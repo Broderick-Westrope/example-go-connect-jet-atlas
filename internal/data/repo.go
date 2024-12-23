@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/Broderick-Westrope/eventurely-go/gen/dev/public/model"
+	"github.com/Broderick-Westrope/example-go-connect-jet-atlas/gen/dev/public/model"
 )
 
 type Respository interface {
