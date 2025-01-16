@@ -1,7 +1,7 @@
 version: v2
 modules:
   - path: api/proto
-    name: buf.build/broderick-westrope/apinae
+    name: buf.build/broderick-westrope/example-go-connect-jet-atlas
 lint:
   use:
     - STANDARD
